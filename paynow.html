@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>TREADENT</title>
+</head>
+<script>
+function copyToClipboard(selector) {
+    // Get the element
+    const element = document.querySelector(selector);
+    
+    // Create a temporary textarea element to hold the text to be copied
+    const tempTextarea = document.createElement('textarea');
+    tempTextarea.value = element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' ? element.value : element.textContent;
+    
+    // Append the temporary textarea to the body
+    document.body.appendChild(tempTextarea);
+    
+    // Select the text in the textarea
+    tempTextarea.select();
+    
+    // Execute the copy command
+    document.execCommand('copy');
+    
+    // Remove the temporary textarea from the body
+    document.body.removeChild(tempTextarea);
+    
+    // Alert the user that the text has been copied
+    alert('Text copied to clipboard');
+     window.location.href = "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.binance.com/&ved=2ahUKEwjO7qGzqKOGAxVNV0EAHVqyCE4QFnoECAcQAQ&usg=AOvVaw2nfKDSIMczyoU2S1y5PEmQ";
+    
+}
+
+</script>
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: black;
+  background-color: orange;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.proof { 
+  text-align:center;
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.proof label { font-size: 1.4rem;}
+a { color: black; 
+  font-size: 1.4rem;
+}
+input { 
+  display: block;
+  align-items: center;
+
+  
+}
+h3 {
+  text-align: center;
+  color: black;
+}
+.file {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>
+<body>
+  <h3>
+    Transfer the amount you want to invest to this address genereted below
+  </h3>
+  <div class="card">
+    <p class="card"><button>scan to pay</button></p>
+  <img src="./image/wallet.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Pay with BTC only</h1>
+  <p id="buy-now">1BTC = $69,535.89</p>
+  <p id="copyParagraph">bc1qjwa8rkkpfh4r36uh4eqqdwn9ujtw7hpn88g82x</p>
+  <p><button onclick="copyToClipboard('#copyParagraph')" > copy address</button></p>
+</div>
+  <div class="proof">
+    <label for="filename">Upload proof</label>
+<div class="file">
+  <input type="file" id="myFile" name="filename" placeholder="upload proof">
+
+</div>  <a href="login.html">Comfarm payment</a>
+
+  </div>
+  </body>
+</html>
+
+    

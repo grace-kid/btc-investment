@@ -1,0 +1,51 @@
+.h2 { 
+  display: inline;
+  margin-left: 20px;
+  color :black;
+  border: 2px solid orange;
+  background-color: white;
+  padding-inline: 10px;
+  border-radius: 30px;
+  
+}
+body {
+  background-color: azure;
+  box-sizing: border-box;
+}
+button {
+  margin: 20px;
+  color : black;
+  border: 1px solid orange;
+  background-color: white;
+  display: block;
+  
+  
+}
+div {
+  border: 2px solid orange;
+  background-color: white;
+  margin: 10px;
+}
+div div {
+  margin: 10px;
+  background-color: orange;
+  color: black;
+  
+  justify-content: space-between;
+  
+  
+}
+div div img {
+  height: 70px;
+  width: 70px;
+  float: left;
+}
+p {
+  display: inline;
+}
+.a {
+  color: orange;
+  border: 2px solid orange;
+  background-color: white;
+  padding-inline: 10px;
+}

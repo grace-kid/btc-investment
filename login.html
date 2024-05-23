@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREADENT</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="container">
+        <div id="auth">
+            <h2>TREADENT</h2>
+            <div id="signup">
+                <h3>Sign Up</h3>
+                <input type="text" id="signup-username" placeholder="Username">
+                <input type="password" id="signup-password" placeholder="Password">
+                <button onclick="signUp()">Sign Up</button>
+            </div>
+            <div id="login">
+                <h3>Login</h3>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="logIn()">Log In</button>
+            </div>
+            <a href="index.html"><button>cancel</button></a>
+        </div>
+        <div id="dashboard" style="display:none;">
+            <h1>Welcome, <span id="username"></span></12>
+            <p class="balance">Wallet Balance: BTC <span id="wallet-balance">0.00000</span></p>
+            <button class="withdraw" onclick="withdraw()">Withdraw Balance</button>
+
+            <div id="investment-plans">
+                <h3>Investment Plans</h3>
+
+         <div class="ivest"><span >Intrest p.a</span ><span >duration</span >               <button>Invest IN BTC</button>
+         </div> 
+         <div class="ivest"><span >10%</span ><span >20 days</span >               <button onclick="buyPlan(100)">Invest $100</button>
+         </div> 
+         <div class="ivest"><span >30%</span ><span >24 hours</span >               <button onclick="buyPlan(500)">Invest $500</button>
+         </div> 
+         <div class="ivest"><span >60%</span ><span >5 days</span >                <button onclick="buyPlan(1000)">Invest $1000</button>
+         </div> 
+         <div class="ivest"><span >90%</span ><span >5 hours</span >                <button onclick="buyPlan(3000)">Invest $3000</button>
+         </div> 
+         <div class="ivest"><span >90%</span ><span >24 hourly</span >                  <button onclick="buyPlan(5000)">Invest $5000</button>
+         </div> 
+         <div class="ivest"><span >90%</span ><span >48 hours</span >                    <button onclick="buyPlan(10000)">Invest $10000</button>
+         </div> 
+         <div class="ivest"><span >100%</span ><span >24 hours</span >                       <button onclick="buyPlan(20000)">Invest $20000</button>
+         </div> 
+         <div class="ivest"><span >120%</span ><span >7 days</span >                        <button onclick="buyPlan(30000)">Invest $30000</button>
+         </div> 
+         <div class="ivest"><span >140%</span ><span >5 days</span >                           <button onclick="buyPlan(40000)">Invest $40000</button>
+         </div> 
+         <div class="ivest"><span >150%</span ><span >24 hours</span >                             <button onclick="buyPlan(50000)">Invest $50000</button>
+         </div> 
+            
+            
+            </div>
+            <br><br>
+            <a href="index.html"><button>cancel</button></a>
+
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

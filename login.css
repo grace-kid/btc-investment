@@ -1,0 +1,79 @@
+body {
+    font-family:  sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+
+    
+    align-items: center;
+    text-align: center;
+    
+
+}
+.balance {
+    font-size: large;
+    font-weight: 700;
+    color: orange;
+    font-family: sans-serif;
+}
+#container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#investment-plans > button {
+ color: black;
+ background-color: orangered;
+}
+#investment-plans > a > button {
+    background-color: orange;
+}
+h2, h3 {
+    margin-top: 0;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    margin: 10px 0;
+    
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+    color: white;
+}
+.withdraw {
+    color: greenyellow;
+    border-radius: 30px;
+    color: black;
+}
+.ivest {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid orange;
+    padding: 20px;
+    background-color: aquamarine;
+    margin: 5px;
+    border-radius: 10px;
+
+}
+.invest span {
+    color: orange;
+    display: inline;
+
+}
