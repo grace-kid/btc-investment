@@ -2,7 +2,9 @@
 
 <html>
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>CryptoPluse</title>
 </head>
 <div class="translator" id="google_translate_element" ></div>
@@ -46,29 +48,36 @@ function copyToClipboard(selector) {
 
 </script>
 <style>
+  
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 20px 10px;
+  margin: 30px 10px;
   border: 2px solid greenyellow;
   border-radius: 20px;
   text-align: center;
   font-family: arial;
   background-color: white;
 }
+.card p {
+  margin: 0;
+}
 @media (min-width: 550px){
   .card {
-    
-    max-width: 500px;
-    
-    justify-content: center;
+    margin: auto;
+    margin-block: 20px;
   }
 }
 .card button a {
   text-decoration: none;
   padding: none;
-  font-size: 18px;
 
 }
+@media (min-width: 550px) {
+  body {
+    margin-inline: 20%;
+  }
+}
+
 @media (min-width: 550px) {
   html {
     display: flex;
@@ -79,7 +88,6 @@ function copyToClipboard(selector) {
 
 .price {
   color: grey;
-  font-size: 22px;
 }
 
 .card button {
@@ -92,11 +100,10 @@ function copyToClipboard(selector) {
   cursor: pointer;
   width: 40%;
   margin: 5px;
-  font-size: 18px;
 }
 
 .card button:hover {
-  opacity: 0.7;
+background-color: greenyellow;
 }
 .proof { 
   text-align:center;
@@ -108,29 +115,25 @@ function copyToClipboard(selector) {
 }
 .proof label { font-size: 1.4rem;}
 a { color: black; 
-  font-size: 1.4rem;
+  
 }
 input { 
   display: block;
-  align-items: center;
-
+margin: auto;
   
 }
 h3 {
   text-align: center;
   color: black;
 }
-@media (min-width: 550px) {
-  h3 {
-    font-size: 2rem;
-  }
-}
+
 .file {
   align-items: center;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: auto;
 }
 .card p img {
   height: 20px;
@@ -138,12 +141,23 @@ h3 {
 }
 body {
   background-color: azure;
+  text-align: center;
+  padding: 20px;
 }
+.confarm {
+  color: orange;
+
+}
+main {
+  display: block;
+  margin: auto;
+}
+
 </style>
 <body>
-  <h3>
-    Transfer the amount you want to invest to  <br>this address genereted below
-  </h3>
+  <h2>
+    Transfer the amount you want to  invest to  <br>this address genereted below
+  </h2>
   <div class="card">
     <p class="card"><img src="./image/btc.png" alt="logo"> BTC scan to pay</p>
   <img src="./image/BTCa.jpg" alt="Denim Jeans" style="width:100%">
@@ -180,16 +194,19 @@ body {
   <p> <button onclick="copyToClipboard('#copyParagraph')" > copy to pay</button>
     <button><a href="Pay me via Trust Wallet: https://link.trustwallet.com/send?coin=501&address=FKLr2K1QgHr5TKMtwicZiGPPyHa1dy54SbPuXUtYUR5x&token_id=5goWRao6a3yNC4d6UjMdQxonkCMvKBwdpubU3qhfcdf1">click to pay</a></button></p>
 </div>
- 
-  <div class="proof">
-    <label for="filename">Upload proof</label>
-<div class="file">
-  <input type="file" id="myFile" name="filename" placeholder="upload proof">
 
-</div>  <a href="login.html">Comfarm payment</a>
-
-  </div>
   </body>
+  <main>
+  
+    <div class="proof">
+      <h1 for="filename">Upload proof</h1>
+  
+    <input type="file" id="myFile" name="filename" placeholder="upload proof">
+  
+    <a href="login.html" class="confarm"><h1>Comfarm payment</h1></a>
+  
+    </div>
+   </main>
 </html>
 
     

