@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TREADENT</title>
+    <title>CryptoPulse</title>
     <link rel="stylesheet" href="login.css">
 </head>
+<div class="translator" id="google_translate_element" ></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,es,fr,de,zh-CN,ja,ar,hi,ru,it,pt,ko,sv,nl,tr,pl', // Add the languages you want to support
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <body>
     <div id="container">
         <div id="auth">
-            <h2>TREADENT</h2>
+            <h2>CryptoPulse</h2>
             <div id="signup">
                 <h3>Sign Up</h3>
-                <input type="text" id="signup-username" placeholder="Username">
-                <input type="password" id="signup-password" placeholder="Password">
-                <button onclick="signUp()">Sign Up</button>
+                <input type="text" id="signup-username" required  placeholder="Username">
+                <input type="password" placeholder="password" id="signup-password" name="pssignup-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>                <button onclick="signUp()">Sign Up</button>
+                <input type="password" placeholder="Comfirm password" id="signup-password" name="pssignup-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>                <button onclick="signUp()">Sign Up</button>
+    <input type="submit" value="Submit" onclick="signUp()">Sign Up</input>
             </div>
             <div id="login">
                 <h3>Login</h3>
@@ -22,23 +35,29 @@
                 <input type="password" id="login-password" placeholder="Password">
                 <button onclick="logIn()">Log In</button>
             </div>
-            <a href="index.html"><button>cancel</button></a>
         </div>
-        <div id="dashboard" style="display:none;">
-            <h1>Welcome, <span id="username"></span></12>
-            <p class="balance">Wallet Balance: BTC <span id="wallet-balance">0.00000</span></p>
+                    <a class="back" href="index.html"><button>cancel</button></a>
+
+        <div id="dashboard" style="display:none;" >
+            <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinPriceBlock.js"></script><div id="coinmarketcap-widget-coin-price-block" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>            <p class="balance">Wallet Balance <br><span id="wallet-balance">0.00000</span>BTC</p>
             <button class="withdraw" onclick="withdraw()">Withdraw Balance</button>
+           <p>Referral Bonus 30%</p>
+
+            <p> <button onclick="copyToClipboard('#copyParagraph')" > copy referral link</button>
+                 <i id="copyParagraph"> link</i></p>
+
 
             <div id="investment-plans">
-                <h3>Investment Plans</h3>
 
-         <div class="ivest"><span >Intrest p.a</span ><span >duration</span >               <button>Invest IN BTC</button>
+                <h4>Investment Plans</h4>
+
+         <div class="ivest"><span >Intrest p.a</span ><span >duration</span >               <span>Invest IN BTC</span>
          </div> 
          <div class="ivest"><span >10%</span ><span >20 days</span >               <button onclick="buyPlan(100)">Invest $100</button>
          </div> 
          <div class="ivest"><span >30%</span ><span >24 hours</span >               <button onclick="buyPlan(500)">Invest $500</button>
          </div> 
-         <div class="ivest"><span >60%</span ><span >5 days</span >                <button onclick="buyPlan(1000)">Invest $1000</button>
+         <div class="ivest"><span >60%</span ><span >Share holder</span >                <button onclick="buyPlan(1000)">Invest $1000</button>
          </div> 
          <div class="ivest"><span >90%</span ><span >5 hours</span >                <button onclick="buyPlan(3000)">Invest $3000</button>
          </div> 
@@ -46,18 +65,19 @@
          </div> 
          <div class="ivest"><span >90%</span ><span >48 hours</span >                    <button onclick="buyPlan(10000)">Invest $10000</button>
          </div> 
-         <div class="ivest"><span >100%</span ><span >24 hours</span >                       <button onclick="buyPlan(20000)">Invest $20000</button>
+         <div class="ivest"><span >100%</span ><span >Share holder</span >                       <button onclick="buyPlan(20000)">Invest $20000</button>
          </div> 
          <div class="ivest"><span >120%</span ><span >7 days</span >                        <button onclick="buyPlan(30000)">Invest $30000</button>
          </div> 
-         <div class="ivest"><span >140%</span ><span >5 days</span >                           <button onclick="buyPlan(40000)">Invest $40000</button>
+         <div class="ivest"><span >100%</span ><span >Share holder</span >                           <button onclick="buyPlan(40000)">Invest $40000</button>
          </div> 
-         <div class="ivest"><span >150%</span ><span >24 hours</span >                             <button onclick="buyPlan(50000)">Invest $50000</button>
+         <div class="ivest"><span >100%</span ><span >24 hours</span >                             <button onclick="buyPlan(50000)">Invest $50000</button>
          </div> 
-            
+         <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
+
             
             </div>
-            <br><br>
+            <br>
             <a href="index.html"><button>cancel</button></a>
 
         </div>

@@ -3,25 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TREADENT</title>
+    <title>CryptoPulse</title>
 </head>
+<div class="translator" id="google_translate_element" ></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            includedLanguages: 'en,es,fr,de,zh-CN,ja,ar,hi,ru,it,pt,ko,sv,nl,tr,pl', // Add the languages you want to support
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="login.js"></script>
 
 <body>
     
         <h1> DEPOSIT METHHOD</h1>
         <div class="card">
             <a href="paynow.html"><button>Invest now</button></a>
-          <img src="./image/download.jpg" alt="Denim Jeans" style="width:100%">
-          <h1>Pay with BTC only</h1>
+          <img src="./image/crypto.png" alt="Denim Jeans" style="width:100%">
+          <h1>Pay with Crypto <p id="pr"></p></h1>
           <p id="buy-now">1BTC = $69,535.89</p>
-          <h2 >Send only Bitcoin (BTC) to this address.</h2>
+          <h2 >Send only Cryptocurrency to this address.</h2>
           <a href="paynow.html"><button  > Pay now</button></a>
         </div>
           <div class="proof">
            <a href="login.html">Cancle payment</a>
         
           </div>
-    
+          <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinPriceBlock.js"></script><div id="coinmarketcap-widget-coin-price-block" coins="1,1027,825" currency="USD" theme="light" transparent="false" show-symbol-logo="true"></div>
 </body>
 <style>
     .card {
@@ -30,6 +42,8 @@
   margin: auto;
   text-align: center;
   font-family: arial;
+  border-radius: 20px;
+  border: 2px solid greenyellow;
 }
 
 .price {

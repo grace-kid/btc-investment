@@ -596,8 +596,8 @@ section , div {
   z-index: 1;
 }
 .return1 img {
-  height: 70px;
-  width:70px;
+  height: 50px;
+  width:50px;
   border-radius: 50%;
 }
 
@@ -662,20 +662,35 @@ section , div {
 
 /* Caption text */
 .text {
-  color: orange;
-  background-color: rgba(0, 0, 0, 0.438);
+  color: white;
+  text-shadow: 0px 0px 4px black;
+  background-color: rgba(17, 17, 17, 0.245);
   text-align: center;
   position: absolute;
-  top: 10%;
+  top: 8%;
   width: 80%;
   margin-inline: 10%;
-  font-family: sans-serif;
+  font-family: sans;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 30px;
   
+}
+.text:hover {
+    background-color: #f9f9f9;
+    color: black;
+    text-shadow: 0px 0px 0px;
+}
+.text p {
+  padding: 0;
+  margin: 0;
 }
 .miner {
   backface-visibility: none;
 }
-
+section > div{
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.516);
+}
 /* Number text (1/3 etc) */
 .numbertext {
   color: orange;
@@ -718,9 +733,8 @@ section , div {
   display: inline;
   width :100%;
   padding-inline: 20px;
-  color :orange;
+
   font-weight: 700;
-  background-color: rgba(0, 0, 0, 0.116);
   
 }
 .miner div div {
@@ -795,4 +809,18 @@ section , div {
   padding: 20px;
   background-color: white;
   margin: 20px;
+}
+
+
+footer {
+  padding: 10px;
+  margin: 20px;
+}
+footer > div {
+  display: block;
+}
+@media (min-width: 500px) {
+  footer > div  {
+    display: flex;
+  }
 }

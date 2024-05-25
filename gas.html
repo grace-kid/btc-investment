@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>TREADENT</title>
+  <title>CryptoPulse</title>
 </head>
 <script>
 function copyToClipboard(selector) {
@@ -34,12 +34,33 @@ function copyToClipboard(selector) {
 
 </script>
 <style>
+  body{
+    background-color: azure;
+  }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
+  margin: 20px 10px;
+  border: 2px solid greenyellow;
   text-align: center;
   font-family: arial;
+  border-radius: 20px;
+  background-color: white ;
+
+}
+@media (min-width: 550px){
+  .card {
+    
+    max-width: 500px;
+    
+    justify-content: center;
+  }
+}
+@media (min-width: 550px) {
+  html {
+    display: flex;
+    justify-content: center;
+    
+  }
 }
 
 .price {
@@ -55,16 +76,24 @@ function copyToClipboard(selector) {
   background-color: orange;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: 40%;
+  margin: 5px;
   font-size: 18px;
 }
 
 .card button:hover {
-  opacity: 0.7;
+  background-color: rgb(9, 252, 9);
+}
+.card button a {
+  text-decoration: none;
+  padding: none;
+  font-size: 18px;
+
 }
 .proof { 
   text-align:center;
   display: flex;
+  
   flex-direction: column;
   justify-content: center;
   
@@ -73,12 +102,20 @@ function copyToClipboard(selector) {
 a { color: black; 
   font-size: 1.4rem;
 }
-input { margin-inline: 40px ;
+input { 
+  display: block;
+  align-items: center;
+
   
 }
 h3 {
   text-align: center;
   color: black;
+}
+@media (min-width: 550px) {
+  h3 {
+    font-size: 2rem;
+  }
 }
 .file {
   align-items: center;
@@ -87,25 +124,76 @@ h3 {
   flex-direction: column;
   justify-content: center;
 }
+.card p img {
+  height: 20px;
+  width: 20px;
+}
+.translator {
+  font-size: 1rem;
+}
 </style>
+
 <body>
+  <div class="translator" id="google_translate_element" ></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,es,fr,de,zh-CN,ja,ar,hi,ru,it,pt,ko,sv,nl,tr,pl', // Add the languages you want to support
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <h3>
     Pay $100 for gas fees to this address genereted below
   </h3>
   <div class="card">
-    <p class="card"><button>scan to pay</button></p>
-  <img src="./image/wallet.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Pay with BTC only</h1>
+    <p class="card"><img src="./image/btc.png" alt="logo"> BTC scan to pay</p>
+  <img src="./image/BTCa.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Pay with BTC </h1>
   <p id="buy-now">1BTC = $69,535.89</p>
-  <p id="copyParagraph">bc1qjwa8rkkpfh4r36uh4eqqdwn9ujtw7hpn88g82x</p>
-  <p><button onclick="copyToClipboard('#copyParagraph')" > copy address</button></p>
+  <p id="copyParagraph">bc1qjwa8rkkpfh4r36uh4eqqdwn9ujtw7hpn88g82</p>
+  <p> <button onclick="copyToClipboard('#copyParagraph')" > copy to pay</button>
+    <button><a href="https://link.trustwallet.com/send?coin=0&address=bc1qjw3c9r0420flpldk22z8gmd85640mmt57c3zka">click to pay</a></button></p>
 </div>
-  <div class="proof">
-    <label for="filename">Upload proof</label>
-  <input type="file" id="myFile" name="filename" placeholder="upload proof">
-  <a href="login.html">Comfarm payment</a>
+  <div class="card">
+    <p class="card"><img src="./image/bnb.png" alt="logo"> BNB scan to pay</p>
+  <img src="./image/BNBa.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Pay with BNB </h1>
+  <p id="buy-now">1BNB = $69,535.89</p>
+  <p id="copyParagraph">0xb13bC0fDBe52c6607145347364d05d0a414E0A5C</p>
+  <p> <button onclick="copyToClipboard('#copyParagraph')" > copy to pay</button>
+    <button><a href="https://link.trustwallet.com/send?coin=20000714&address=0xb13bC0fDBe52c6607145347364d05d0a414E0A5C">click to pay</a></button></p>
+</div>
+  <div class="card">
+    <p class="card"><img src="./image/eth.jpg" alt="logo"> ETH scan to pay</p>
+  <img src="./image/ETHa.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Pay with ETH </h1>
+  <p id="buy-now">1ETH = $3,535.89</p>
+  <p id="copyParagraph">0xb13bC0fDBe52c6607145347364d05d0a414E0A5CC</p>
+  <p> <button onclick="copyToClipboard('#copyParagraph')" > copy to pay</button>
+    <button><a href="https://link.trustwallet.com/send?coin=60&address=0xb13bC0fDBe52c6607145347364d05d0a414E0A5C">click to pay</a></button></p>
+</div>
+  <div class="card">
+    <p class="card"><img src="./image/usdt.png" alt="logo"> USDT scan to pay</p>
+  <img src="./image/USDTa.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Pay with USDT </h1>
+  <p id="buy-now">1USDT = $0.999413</p>
+  <p id="copyParagraph">FKLr2K1QgHr5TKMtwicZiGPPyHa1dy54SbPuXUtYUR5x</p>
+  <p> <button onclick="copyToClipboard('#copyParagraph')" > copy to pay</button>
+    <button><a href="Pay me via Trust Wallet: https://link.trustwallet.com/send?coin=501&address=FKLr2K1QgHr5TKMtwicZiGPPyHa1dy54SbPuXUtYUR5x&token_id=5goWRao6a3yNC4d6UjMdQxonkCMvKBwdpubU3qhfcdf1">click to pay</a></button></p>
+</div>
 
-  </div>
+<div class="proof">
+  <label for="filename">Upload proof</label>
+<div class="file">
+<input type="file" id="myFile" name="filename" placeholder="upload proof">
+
+</div>  <a href="login.html">Comfarm payment</a>
+
+</div>
   </body>
 </html>
 

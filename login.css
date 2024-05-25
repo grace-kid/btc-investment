@@ -10,11 +10,20 @@ body {
     
 
 }
+#dashboard {
+background-color: chartreuse;
+width: 100%;
+margin-top: 0;
+padding-top: 20px;
+}
 .balance {
     font-size: large;
     font-weight: 700;
-    color: orange;
-    font-family: sans-serif;
+    color: black;
+    font-family: serif;
+    margin: 10px;
+    background-color: aqua;
+    
 }
 #container {
     background-color: white;
@@ -29,10 +38,21 @@ body {
 #investment-plans > a > button {
     background-color: orange;
 }
-h2, h3 {
-    margin-top: 0;
+h2, h3 ,h4 ,p {
+    margin: 0;
+    font-family: serif;}
+@media (max-width: 400px) {
+    h4 {
+        color: black;
+        font-size: 1rem;
+    }
 }
-
+@media (max-width: 400px) {
+   p  {
+    font-size: 1rem;
+    color: rgb(116, 113, 49);
+   } 
+}
 input {
     display: block;
     margin: 10px 0;
@@ -42,12 +62,12 @@ input {
 }
 
 button {
-    padding: 10px;
-    margin: 10px 0;
+    padding-top: 3px;
+    margin: 5px 0;
     
     background-color: orange;
     color: black;
-    border: none;
+    
     border-radius: 30px;
     cursor: pointer;
 }
@@ -64,9 +84,10 @@ button:hover {
 .ivest {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    
     border: 1px solid orange;
     padding: 20px;
+    align-items: center;
     background-color: aquamarine;
     margin: 5px;
     border-radius: 10px;
@@ -77,3 +98,24 @@ button:hover {
     display: inline;
 
 }
+#wallet-balance {
+    color: black;
+    background-color: rgb(255, 208, 0);
+    padding-inline: 3px;
+    border-radius: 10px;
+}
+.back {
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+@media (max-width: 400px){
+    .ivest {
+        font-size: small;
+        padding: 5px;
+        
+    }
+}
+
+
+

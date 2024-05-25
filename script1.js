@@ -93,6 +93,10 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-
+const recipient = 'tradentinvestment@gmail.com';
+const subject = 'costomer care';
+const body = "Don't forget our meeting at 3 PM tomorrow.";
+const gmailLink =' https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}';
+console.log(gmailLink);
 
 

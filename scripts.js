@@ -72,7 +72,7 @@ function withdraw() {
 function updateBalanceSinceLastUpdate() {
     const now = Date.now();
     const secondsElapsed = Math.floor((now - lastUpdate) / 1000);
-    walletBalance *= Math.pow(1.05, secondsElapsed);
+    walletBalance *= Math.pow(1.00005, secondsElapsed);
     lastUpdate = now;
     localStorage.setItem('walletBalance', walletBalance);
     localStorage.setItem('lastUpdate', lastUpdate);
@@ -82,11 +82,11 @@ function updateBalanceSinceLastUpdate() {
 function startBalanceIncrease() {
     clearInterval(balanceInterval); // Ensure no previous interval is running
     balanceInterval = setInterval(() => {
-        walletBalance *= 1.05; // Increase balance by 5% every second
+        walletBalance *= 1.00005; // Increase balance by 5% every second
         localStorage.setItem('walletBalance', walletBalance);
         localStorage.setItem('lastUpdate', Date.now());
         updateWallet();
-    }, 1000); // 1000 milliseconds = 1 second
+    }, 10000); // 1000 milliseconds = 1 second
 }
 
 
