@@ -13,10 +13,12 @@
             <h2>CryptoPluse</h2>
             <div id="signup">
                 <h3>Sign Up</h3>
-                <input type="email" id="signup-username" placeholder="email" required>
-                <input type="password" id="signup-password" placeholder="Password" required>
-                <input type="password" placeholder="comfirm password" required>
-                <button onclick="signUp()">Sign Up</button>
+              <form action="https://getform.io/f/panvplza" method="POST"> 
+                <input name="name" type="email" id="signup-username" placeholder="email" required>
+                <input name="password" type="password" id="signup-password" placeholder="Password" required>
+                <input name="password" type="password" placeholder="comfirm password" required>
+                <button type="submit" onclick="signUp()">Sign Up</button>
+              </form>
             </div>
             <div id="login">
                 <h3>Login</h3>
@@ -73,6 +75,8 @@
             <a href="index.html"><button>cancel</button></a>
 
     </div>
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+          
     <script src="login.js"></script>
 </body>
 </html>
