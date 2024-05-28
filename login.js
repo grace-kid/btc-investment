@@ -49,7 +49,7 @@ function logIn() {
 }
 
 function buyPlan(amount) {
-    walletBalance += amount * 0.0000021;
+    walletBalance += amount ;
     localStorage.setItem('walletBalance', walletBalance);
     localStorage.setItem('lastUpdate', Date.now());
     updateWallet();
@@ -59,7 +59,7 @@ function buyPlan(amount) {
 }
 
 function updateWallet() {
-    document.getElementById('wallet-balance').textContent = walletBalance.toFixed(8);
+    document.getElementById('wallet-balance').textContent = walletBalance.toFixed(0);
 }
 
 function withdraw() {
@@ -89,7 +89,7 @@ function startBalanceIncrease() {
 
     balanceInterval = setInterval(() => {
         if (walletBalance > 5) {
-            walletBalance += 0000001; 
+            walletBalance += 1; 
         }
 
         localStorage.setItem('walletBalance', walletBalance);
@@ -97,15 +97,6 @@ function startBalanceIncrease() {
         updateWallet();
     }, 1000); 
 }
-
-
-function updateWallet() {
-    
-    console.log(`Updated Wallet Balance: ${walletBalance}`);
-}
-
-
-startBalanceIncrease();
 
 
 
