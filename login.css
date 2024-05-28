@@ -25,7 +25,9 @@ padding-top: 20px;
     background-color: aqua;
     
 }
-#signup:hover ,#login:hover { background-color: azure}
+#signup:hover ,#login:hover { background-color: azure;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 #container {
     background-color: white;
     padding: 20px;
