@@ -11,7 +11,7 @@ body {
 
 }
 #dashboard {
-background-color: white ;
+background-color: azure ;
 width: 100%;
 margin-top: 0;
 padding-top: 20px;
@@ -25,7 +25,7 @@ padding-top: 20px;
     background-color: aqua;
     
 }
-#singup:hover ,#login:hover { background-color: green}
+#singup:hover ,#login:hover { background-color: azure}
 #container {
     background-color: white;
     padding: 20px;
@@ -87,9 +87,9 @@ button:hover {
     justify-content: space-between;
     
     border: 1px solid orange;
-    padding: 5px 20px;
+    padding: 20px;
     align-items: center;
-    background-color: gray;
+    background-color: white;
     margin: 5px;
     border-radius: 10px;
 
@@ -102,7 +102,7 @@ button:hover {
 #wallet-balance {
     color: black;
     background-color: rgb(255, 208, 0);
-    padding-inline: 3px;
+    padding-inline: 4px;
     border-radius: 10px;
 }
 .back {
@@ -113,7 +113,7 @@ button:hover {
 @media (max-width: 400px){
     .ivest {
         font-size: small;
-        padding: 5px;
+        padding: 1px 5px;
         
     }
 }
