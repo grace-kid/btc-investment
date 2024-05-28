@@ -91,7 +91,7 @@ function startBalanceIncrease() {
         localStorage.setItem('walletBalance', walletBalance);
         localStorage.setItem('lastUpdate', Date.now());
         updateWallet();
-    }, 500000000); // 1000 milliseconds = 1 second
+    }, 9999999999999000000); // 1000 milliseconds = 1 second
 }
 
 
