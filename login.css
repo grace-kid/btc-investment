@@ -25,6 +25,7 @@ padding-top: 20px;
     background-color: aqua;
     
 }
+#sinup:hover ,#login:hover { background-color: gray}
 #container {
     background-color: white;
     padding: 20px;
