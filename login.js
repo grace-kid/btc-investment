@@ -85,21 +85,27 @@ function updateBalanceSinceLastUpdate() {
 }
 
 function startBalanceIncrease() {
-    clearInterval(balanceInterval); // Ensure no previous interval is running
+    clearInterval(balanceInterval); 
 
     balanceInterval = setInterval(() => {
         if (walletBalance > 5) {
-            walletBalance += 0000001; // Increase balance by 5 if it's greater than 5
+            walletBalance += 0000001; 
         }
 
         localStorage.setItem('walletBalance', walletBalance);
         localStorage.setItem('lastUpdate', Date.now());
         updateWallet();
-    }, 1000); // 1000 milliseconds = 1 second
+    }, 1000); 
 }
 
 
+function updateWallet() {
+    
+    console.log(`Updated Wallet Balance: ${walletBalance}`);
+}
 
+
+startBalanceIncrease();
 
 
 
