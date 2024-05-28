@@ -1,6 +1,6 @@
 body {
     font-family:  sans-serif;
-    background-color: gray;
+    background-color: white;
     margin: 0;
     padding: 0;
 
@@ -25,7 +25,7 @@ padding-top: 20px;
     background-color: aqua;
     
 }
-#sinup:hover ,#login:hover { background-color: gray}
+#singup:hover ,#login:hover { background-color: green}
 #container {
     background-color: white;
     padding: 20px;
