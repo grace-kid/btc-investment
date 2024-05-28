@@ -1,6 +1,6 @@
 body {
     font-family:  sans-serif;
-    background-color: white;
+    background-color: gray;
     margin: 0;
     padding: 0;
 
@@ -11,7 +11,7 @@ body {
 
 }
 #dashboard {
-background-color: chartreuse;
+background-color: white ;
 width: 100%;
 margin-top: 0;
 padding-top: 20px;
@@ -87,9 +87,9 @@ button:hover {
     justify-content: space-between;
     
     border: 1px solid orange;
-    padding: 20px;
+    padding: 5px 20px;
     align-items: center;
-    background-color: aquamarine;
+    background-color: gray;
     margin: 5px;
     border-radius: 10px;
 
